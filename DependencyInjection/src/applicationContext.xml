@@ -4,6 +4,9 @@
 <!-- define the dependency -->
 <bean class= "com.prayagdesai.dependency.HappyFortuneService" id="myFortune"></bean>
 <bean class="com.prayagdesai.dependency.BaseballCoach" id="my">
-<constructor-arg ref="myFortune"/>
- </bean>
+<constructor-arg ref="myFortune"/></bean>
+<bean class="com.prayagdesai.dependency.CricketCoach" id="my1">
+<property name="fortuneService" ref="myFortune"/>
+</bean>
+ 
 </beans>
