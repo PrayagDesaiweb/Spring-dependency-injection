@@ -11,6 +11,8 @@ public class SetterDemoApp {
 				CricketCoach theCoach = context.getBean("my1", CricketCoach.class); // Coach.class is the actual name of the inteface 
 				// call mehthods on the bean
 				System.out.println(theCoach.getFortune());
+				// call the new values 
+				System.out.println(theCoach.getName());
 				// close the bean
 				context.close();
 

@@ -7,6 +7,8 @@
 <constructor-arg ref="myFortune"/></bean>
 <bean class="com.prayagdesai.dependency.CricketCoach" id="my1">
 <property name="fortuneService" ref="myFortune"/>
+<property name="emailAddress" value="prayagdesai@gmail.com"/>
+<property name="name" value="CSK"/>
 </bean>
  
 </beans>
