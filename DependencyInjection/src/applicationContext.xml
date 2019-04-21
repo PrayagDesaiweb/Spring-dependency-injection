@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
 <!-- Define your beans here -->
-<!-- define the dependency -->
+<!-- Adding the properties file in the context file --> 
+
+
+<context:property-placeholder location="classpath:sport.properties"/>
+
 <bean class= "com.prayagdesai.dependency.HappyFortuneService" id="myFortune"></bean>
 <bean class="com.prayagdesai.dependency.BaseballCoach" id="my">
 <constructor-arg ref="myFortune"/></bean>
 <bean class="com.prayagdesai.dependency.CricketCoach" id="my1">
 <property name="fortuneService" ref="myFortune"/>
 <property name="emailAddress" value="prayagdesai@gmail.com"/>
-<property name="name" value="CSK"/>
+<property name="name" value="${foo.name}"/>
 </bean>
  
 </beans>
